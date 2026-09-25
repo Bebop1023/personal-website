@@ -1,4 +1,4 @@
-import { site, hero, stats, links, about, skills, experience, projects, startup, ventures, athletics, leadership, servicePhotos, honors, contact } from "@/content";
+import { site, hero, stats, links, about, skills, experience, projects, startup, ventures, athletics, leadership, serviceGroups, honors, contact } from "@/content";
 import Reveal from "@/components/Reveal";
 import RoleCycler from "@/components/RoleCycler";
 import Carousel from "@/components/Carousel";
@@ -379,11 +379,21 @@ export default function Home() {
               </ul>
             </Reveal>
           </div>
-          {servicePhotos.length > 0 && (
-            <Reveal className="service-photos">
+          {serviceGroups.length > 0 && (
+            <div className="service-photos">
               <p className="eyebrow also">Beyond the campus</p>
-              <Carousel photos={servicePhotos} />
-            </Reveal>
+              <div className="service-groups">
+                {serviceGroups.map((g) => (
+                  <Reveal key={g.org} className="service-group">
+                    <div className="service-head">
+                      <h3>{g.org}</h3>
+                      <span className="mono muted">{g.note}</span>
+                    </div>
+                    <Carousel photos={g.photos} />
+                  </Reveal>
+                ))}
+              </div>
+            </div>
           )}
         </section>
 
