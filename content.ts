@@ -19,10 +19,10 @@ export const site = {
 };
 
 export const hero = {
-  status: "Cyber & Security Operations Intern @ Ridge IT Cyber",
+  status: "Prev. Cyber & Security Operations Intern @ Ridge IT Cyber",
   headline: ["I build software,", "secure systems,", "and businesses."],
   intro:
-    "CS student at North Carolina A&T and co-founder of AutonomIQ, a voice AI startup. I ship AI products at hackathons, triage real threats in CrowdStrike, and run a streetwear brand on the side.",
+    "CS student at North Carolina A&T and co-founder of AutonomIQ, a voice AI startup. I ship AI products at hackathons, have triaged real threats in CrowdStrike, and run a streetwear brand on the side.",
   roles: ["Software Engineer", "Security Ops", "AI Builder", "Founder"],
 };
 
