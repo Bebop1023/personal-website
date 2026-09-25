@@ -118,8 +118,8 @@ export const projects = [
     ],
     stack: ["Next.js", "TypeScript", "Python", "GPT-4o", "Whisper", "TTS"],
     image: "/projects/scholarsync.jpg",
-    link: "https://scholar-sync1.vercel.app/",
-    linkLabel: "Live site",
+    link: "", // demo video link goes here (button hidden while blank)
+    linkLabel: "Watch demo",
   },
   {
     name: "Heart Care AI",
