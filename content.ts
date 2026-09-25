@@ -125,19 +125,6 @@ export const projects = [
     link: "",
     linkLabel: "",
   },
-  {
-    name: "Stryde",
-    award: "",
-    event: "Personal Project",
-    date: "2026",
-    summary:
-      "Mobile app that lets coaches push live training plans, practice schedules, diet plans, and recovery routines straight to their athletes, even offline.",
-    points: [],
-    stack: ["TypeScript", "Mobile"],
-    image: "",
-    link: "https://github.com/Bebop1023/Stryde",
-    linkLabel: "GitHub",
-  },
 ];
 
 export const ventures = [
