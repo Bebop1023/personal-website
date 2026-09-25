@@ -1,4 +1,4 @@
-import { site, hero, stats, links, about, skills, experience, projects, ventures, leadership, honors } from "@/content";
+import { site, hero, stats, links, about, skills, experience, projects, startup, ventures, leadership, honors } from "@/content";
 import Reveal from "@/components/Reveal";
 import RoleCycler from "@/components/RoleCycler";
 
@@ -13,10 +13,11 @@ function Arrow() {
 function SectionHead({ index, label, title }: { index: string; label: string; title: string }) {
   return (
     <Reveal className="section-head">
-      <p className="eyebrow">
-        <span className="accent">{index}</span> / {label}
-      </p>
-      <h2>{title}</h2>
+      <span className="sec-num" aria-hidden>{index}</span>
+      <div>
+        <p className="eyebrow">{label}</p>
+        <h2>{title}</h2>
+      </div>
     </Reveal>
   );
 }
@@ -38,8 +39,8 @@ export default function Home() {
         <nav>
           <a href="#about">About</a>
           <a href="#experience">Experience</a>
+          <a href="#startup">Startup</a>
           <a href="#projects">Projects</a>
-          <a href="#ventures">Ventures</a>
           <a href="#contact">Contact</a>
         </nav>
         <a className="btn btn-sm" href={site.resume} target="_blank" rel="noreferrer">
@@ -170,9 +171,80 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ---------- STARTUP ---------- */}
+        <section id="startup" className="wrap section">
+          <SectionHead index="03" label="Founder" title="My startup." />
+          <Reveal className="startup">
+            <div className="startup-main">
+              <p className="eyebrow">
+                <span className="accent">{startup.role}</span> · Since {startup.since}
+              </p>
+              <h3>{startup.name}</h3>
+              <p className="venture-tagline">{startup.tagline}</p>
+              <p className="venture-desc">{startup.description}</p>
+              <ul>
+                {startup.highlights.map((h, i) => (
+                  <li key={i}>{h}</li>
+                ))}
+              </ul>
+              <div className="chips">
+                {startup.stack.map((s) => (
+                  <span key={s} className="chip">{s}</span>
+                ))}
+              </div>
+              <a className="btn btn-primary venture-btn" href={startup.link} target="_blank" rel="noreferrer">
+                {startup.cta} <Arrow />
+              </a>
+            </div>
+            <div className="call" aria-label="Example AutonomIQ call">
+              <div className="call-head">
+                <span className="call-live"><span className="dot" /> Live call</span>
+                <span className="mono muted">AI Receptionist</span>
+              </div>
+              <div className="call-body">
+                {startup.demoCall.map((m, i) => (
+                  <div key={i} className={`bubble ${m.who}`}>
+                    <span className="who">{m.who === "ai" ? "AutonomIQ" : "Caller"}</span>
+                    {m.text}
+                  </div>
+                ))}
+              </div>
+              <div className="call-foot">
+                <span>✓ Appointment booked</span>
+                <span>✓ SMS sent</span>
+                <span>✓ Owner notified</span>
+              </div>
+            </div>
+          </Reveal>
+
+          {ventures.length > 0 && (
+            <>
+              <p className="eyebrow also">Also building</p>
+              <div className="ventures">
+                {ventures.map((v, i) => (
+                  <Reveal key={v.name} delay={i * 120} className="venture">
+                    <p className="eyebrow">{v.role}</p>
+                    <h3>{v.name}</h3>
+                    <p className="venture-tagline">{v.tagline}</p>
+                    <p className="venture-desc">{v.description}</p>
+                    <div className="chips">
+                      {v.stack.map((s) => (
+                        <span key={s} className="chip">{s}</span>
+                      ))}
+                    </div>
+                    <a className="btn venture-btn" href={v.link} target="_blank" rel="noreferrer">
+                      {v.cta} <Arrow />
+                    </a>
+                  </Reveal>
+                ))}
+              </div>
+            </>
+          )}
+        </section>
+
         {/* ---------- PROJECTS ---------- */}
         <section id="projects" className="wrap section">
-          <SectionHead index="03" label="Projects" title="Things I’ve shipped." />
+          <SectionHead index="04" label="Projects" title="Things I’ve shipped." />
           <div className="projects">
             {projects.map((p, i) => (
               <Reveal key={p.name} delay={(i % 2) * 100} className={`project ${p.award ? "has-award" : ""}`}>
@@ -223,29 +295,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ---------- VENTURES ---------- */}
-        <section id="ventures" className="wrap section">
-          <SectionHead index="04" label="Ventures" title="Companies I run." />
-          <div className="ventures">
-            {ventures.map((v, i) => (
-              <Reveal key={v.name} delay={i * 120} className="venture">
-                <p className="eyebrow">{v.role}</p>
-                <h3>{v.name}</h3>
-                <p className="venture-tagline">{v.tagline}</p>
-                <p className="venture-desc">{v.description}</p>
-                <div className="chips">
-                  {v.stack.map((s) => (
-                    <span key={s} className="chip">{s}</span>
-                  ))}
-                </div>
-                <a className="btn venture-btn" href={v.link} target="_blank" rel="noreferrer">
-                  {v.cta} <Arrow />
-                </a>
-              </Reveal>
-            ))}
-          </div>
-        </section>
-
         {/* ---------- LEADERSHIP ---------- */}
         <section id="leadership" className="wrap section">
           <SectionHead index="05" label="Leadership & Honors" title="On campus and beyond." />
@@ -276,9 +325,10 @@ export default function Home() {
         {/* ---------- CONTACT ---------- */}
         <section id="contact" className="wrap section contact">
           <Reveal>
-            <p className="eyebrow">
-              <span className="accent">06</span> / Contact
-            </p>
+            <div className="section-head">
+              <span className="sec-num" aria-hidden>06</span>
+              <p className="eyebrow">Contact</p>
+            </div>
             <h2 className="contact-title">
               Let’s build <span className="accent-line">something.</span>
             </h2>

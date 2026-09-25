@@ -22,7 +22,7 @@ export const hero = {
   status: "Cyber & Security Operations Intern @ Ridge IT Cyber",
   headline: ["I build software,", "secure systems,", "and businesses."],
   intro:
-    "CS student at North Carolina A&T. I ship AI products at hackathons, triage real threats in CrowdStrike, and run an AI automation agency and a streetwear brand on the side.",
+    "CS student at North Carolina A&T and co-founder of AutonomIQ, a voice AI startup. I ship AI products at hackathons, triage real threats in CrowdStrike, and run a streetwear brand on the side.",
   roles: ["Software Engineer", "Security Ops", "AI Builder", "Founder"],
 };
 
@@ -127,17 +127,33 @@ export const projects = [
   },
 ];
 
+// ---------- STARTUP (featured "Founder" section) ----------
+export const startup = {
+  name: "AutonomIQ",
+  role: "Co-Founder · Product & Voice AI Lead",
+  since: "2026",
+  tagline: "Every call answered. Every opportunity captured.",
+  description:
+    "AutonomIQ is my startup. Local service businesses lose jobs every time a call goes to voicemail, so we built an AI receptionist that picks up 24/7, answers questions, recovers missed calls, and books the appointment on the spot.",
+  highlights: [
+    "Built the core product: a voice agent that checks live calendar availability, books jobs mid-call, and transfers emergencies to the owner.",
+    "Took it from idea to a registered LLC with a live site, published pricing, and an approved business texting brand.",
+    "Lead product and sales on a three-person founding team, plus the automation suite for reminders, reviews, and payment links.",
+  ],
+  stack: ["Vapi", "Make.com", "Twilio", "Google Calendar", "LLMs"],
+  link: "https://autonomiq.llc",
+  cta: "Visit autonomiq.llc",
+  // The example call shown on the right side of the card
+  demoCall: [
+    { who: "caller", text: "Hey, my garage door won't close and I leave for work at 7." },
+    { who: "ai", text: "Sorry about that! I have a technician open tomorrow at 6:15 AM. Want me to lock that in?" },
+    { who: "caller", text: "Yes, please." },
+    { who: "ai", text: "Done. You'll get a text confirmation in a moment." },
+  ],
+};
+
+// ---------- OTHER VENTURES (smaller cards under the startup) ----------
 export const ventures = [
-  {
-    name: "AutonomIQ",
-    role: "Co-Founder · Voice AI & Automation Lead",
-    tagline: "Every call answered. Every opportunity captured.",
-    description:
-      "An AI automation agency for local service businesses. I build the product: a 24/7 AI voice receptionist that answers calls, recovers missed ones, and books appointments straight onto the calendar, plus automations for reminders, reviews, and payments.",
-    stack: ["Vapi", "Make.com", "Twilio", "Google Calendar"],
-    link: "https://autonomiq.llc",
-    cta: "Visit autonomiq.llc",
-  },
   {
     name: "Operating System",
     role: "Founder · Creative Director",

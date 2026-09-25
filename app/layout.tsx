@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import "@fontsource-variable/bricolage-grotesque";
+import "@fontsource-variable/schibsted-grotesk";
+import "@fontsource/instrument-serif/400-italic.css";
 import "@fontsource-variable/manrope";
 import "@fontsource-variable/jetbrains-mono";
 import { site } from "@/content";
