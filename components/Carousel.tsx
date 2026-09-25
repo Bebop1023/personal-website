@@ -25,7 +25,7 @@ export default function Carousel({ photos }: { photos: Photo[] }) {
         ))}
       </div>
       <div className="carousel-controls">
-        <span className="mono muted">Scroll for more →</span>
+        <span className="mono muted"><span className="hint-desk">Scroll for more →</span><span className="hint-touch">Swipe for more →</span></span>
         <div className="carousel-btns">
           <button type="button" aria-label="Previous photos" onClick={() => scroll(-1)}>←</button>
           <button type="button" aria-label="Next photos" onClick={() => scroll(1)}>→</button>

@@ -430,3 +430,56 @@ main { overflow-x: clip; }
   .project-foot { flex-direction: column; align-items: flex-start; }
   .lead-row { flex-direction: column; gap: 2px; }
 }
+
+
+/* ============ Phone polish ============ */
+/* Grid items must be allowed to shrink so wide children (carousels, long URLs) never push cards past the screen */
+.projects > *, .ventures > *, .about-grid > *, .lead-grid > *, .tkd-top > *, .hero-grid > *, .startup > *, .closer > *, .resume-card > * { min-width: 0; }
+.projects, .ventures, .service-groups { grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); }
+.hint-touch { display: none; }
+@media (hover: none) {
+  .hint-desk { display: none; }
+  .hint-touch { display: inline; }
+  .carousel-btns { display: none; }
+}
+@media (max-width: 900px) {
+  .projects, .ventures, .service-groups { grid-template-columns: minmax(0, 1fr); }
+  /* Swipeable section menu under the header */
+  .nav { flex-wrap: wrap; row-gap: 10px; }
+  .nav nav {
+    display: flex; order: 3; width: 100%; gap: 8px; overflow-x: auto; scrollbar-width: none;
+    margin: 0 -16px; padding: 0 16px 2px; -webkit-overflow-scrolling: touch;
+  }
+  .nav nav::-webkit-scrollbar { display: none; }
+  .nav nav a {
+    flex: 0 0 auto; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line);
+    background: var(--surface); color: #cfcdc6; font-size: 13.5px;
+  }
+  html { scroll-padding-top: 124px; }
+  .hero { padding-top: 28px; }
+  .portrait { max-width: 280px; }
+  .hero h1 { font-size: clamp(34px, 10vw, 48px); }
+  .intro { font-size: 16.5px; }
+  .socials a { padding: 10px 2px; }
+  .link { padding: 10px 0; }
+  .to-top { padding: 10px 0; }
+  .section { padding-top: 80px; }
+  .section-head { gap: 14px; margin-bottom: 32px; }
+  .sec-num { font-size: 64px; }
+  .carousel-controls { margin-top: 10px; }
+  .venture h3 { font-size: 34px; }
+  .venture-tagline { font-size: 20px; }
+  .startup h3 { font-size: 44px; }
+  .job h3 { font-size: 22px; }
+  .project h3 { font-size: 26px; }
+  .stat-label { font-size: 12.5px; }
+  .ctas .btn { flex: 1 1 auto; justify-content: center; }
+  .ctas .socials { flex: 1 1 100%; justify-content: center; }
+}
+@media (max-width: 520px) {
+  .nav nav { margin: 0 -16px; }
+  .resume-thumb { max-width: 200px; margin: 0 auto; }
+  .slide, .venture-photos .slide, .service-photos .slide { height: 340px; }
+  .clink { grid-template-columns: 78px minmax(0, 1fr) auto; gap: 8px; }
+  .clink .eyebrow { font-size: 11px; letter-spacing: 0.08em; }
+}

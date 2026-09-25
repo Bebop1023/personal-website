@@ -43,6 +43,7 @@ export default function Home() {
           <a href="#startup">Startup</a>
           <a href="#projects">Hackathons</a>
           <a href="#taekwondo">Taekwondo</a>
+          <a href="#leadership">Service</a>
           <a href="#contact">Contact</a>
         </nav>
         <a className="btn btn-sm" href={site.resume} target="_blank" rel="noreferrer">
