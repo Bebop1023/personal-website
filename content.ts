@@ -118,7 +118,7 @@ export const projects = [
     ],
     stack: ["Next.js", "TypeScript", "Python", "GPT-4o", "Whisper", "TTS"],
     image: "/projects/scholarsync.jpg",
-    link: "", // demo video link goes here (button hidden while blank)
+    link: "https://drive.google.com/file/d/1jsFEkGU76KKBRjbuFwS28nbNsvKoC7Lx/view", // demo video
     linkLabel: "Watch demo",
   },
   {
