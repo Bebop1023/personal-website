@@ -176,15 +176,17 @@ export const ventures = [
 ];
 
 // ---------- TAEKWONDO ----------
-// Photos live in /public/tkd. size: "big" (2x2), "wide" (2x1), "tall" (1x2), or "" (1x1).
+// Photos live in /public/tkd and show in a scrollable strip, in this order.
+// size sets the slide width: "wide" or "big" (landscape), "tall" (portrait), or "" (medium).
 // position (optional): which part of the photo to keep in frame, e.g. "center 20%".
 export const athletics = {
   title: "Discipline, on the mat.",
   intro: [
     "Long before hackathons, there was the mat. Taekwondo taught me the habits I bring to everything else: show up, put in the reps, take the loss, and come back sharper.",
-    "It took me to national team trials, international competition, and two selections to the USA Taekwondo National Team.",
+    "It took me to national team trials, international competition, 11 national medals (4 gold), and two selections to the USA Taekwondo National Team.",
   ],
   achievements: [
+    { year: "11x", title: "National Medalist", detail: "4 gold medals at the national level" },
     { year: "2x", title: "USA Taekwondo National Team", detail: "Represented Team USA internationally" },
     { year: "2023", title: "Gold, USA Taekwondo Team Trials", detail: "National team qualifier" },
     { year: "2024", title: "Bronze, Costa Rica President's Cup", detail: "World Taekwondo G2 ranking event · Heredia, Costa Rica" },

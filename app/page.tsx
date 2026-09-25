@@ -1,6 +1,7 @@
 import { site, hero, stats, links, about, skills, experience, projects, startup, ventures, athletics, leadership, honors, contact } from "@/content";
 import Reveal from "@/components/Reveal";
 import RoleCycler from "@/components/RoleCycler";
+import Carousel from "@/components/Carousel";
 
 function Arrow() {
   return (
@@ -317,15 +318,9 @@ export default function Home() {
               ))}
             </Reveal>
           </div>
-          <div className="gallery">
-            {athletics.photos.map((ph, i) => (
-              <Reveal key={ph.src} delay={(i % 4) * 70} className={`tile ${ph.size}`}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={ph.src} alt={ph.alt} loading="lazy" style={ph.position ? { objectPosition: ph.position } : undefined} />
-                <span className="tile-cap">{ph.caption}</span>
-              </Reveal>
-            ))}
-          </div>
+          <Reveal>
+            <Carousel photos={athletics.photos} />
+          </Reveal>
         </section>
 
         {/* ---------- LEADERSHIP ---------- */}
