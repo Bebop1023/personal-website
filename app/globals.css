@@ -287,6 +287,9 @@ main { overflow-x: clip; }
 .bubble.ai { align-self: flex-end; background: var(--accent); color: #141414; border-bottom-right-radius: 4px; }
 .call-foot { display: flex; flex-wrap: wrap; gap: 8px 16px; padding: 14px 18px; border-top: 1px solid var(--line); font-family: var(--font-mono); font-size: 12px; color: #3ddc84; }
 .also { margin: 40px 0 16px; }
+.service-photos .slide { height: 420px; }
+.service-photos .slide.tall { width: 300px; }
+.service-photos .slide.wide { width: 560px; }
 .venture h3 { font-size: clamp(34px, 4vw, 48px); font-weight: 800; }
 .venture-tagline { font-size: 24px; font-style: italic; color: var(--accent); font-family: var(--font-serif), serif; line-height: 1.2; }
 .venture-desc { color: #bdbbb4; }

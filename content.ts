@@ -236,6 +236,16 @@ export const leadership = [
   },
 ];
 
+// ---------- SERVICE PHOTOS (scrollable strip in the Leadership & Service section) ----------
+// Photos live in /public/service. size: "wide" (landscape), "tall" (portrait), or "" (medium).
+export const servicePhotos = [
+  { src: "/service/01-tie-exchange.jpg", alt: "Miles and friends running The Tie Exchange donation table in the student union", caption: "The Tie Exchange donation drive", size: "tall" },
+  { src: "/service/02-tie-exchange-bin.jpg", alt: "Collection bin filling up with donated ties", caption: "Ties coming in", size: "tall" },
+  { src: "/service/03-build-night.jpg", alt: "Group of students giving thumbs up in a workshop", caption: "Build night with the team", size: "wide" },
+  { src: "/service/04-acm-portfolio-night.jpg", alt: "Flyer for ACM Portfolio Night at NC A&T", caption: "ACM Portfolio Night", size: "tall" },
+  { src: "/service/05-acm-pitch-in-20.jpg", alt: "Flyer for ACM Pitch in 20 at NC A&T", caption: "ACM Pitch in 20", size: "tall" },
+];
+
 export const honors = [
   "Chancellor's List (Fall 2025)",
   "Aggie Merit Scholarship",

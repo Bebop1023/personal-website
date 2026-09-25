@@ -1,4 +1,4 @@
-import { site, hero, stats, links, about, skills, experience, projects, startup, ventures, athletics, leadership, honors, contact } from "@/content";
+import { site, hero, stats, links, about, skills, experience, projects, startup, ventures, athletics, leadership, servicePhotos, honors, contact } from "@/content";
 import Reveal from "@/components/Reveal";
 import RoleCycler from "@/components/RoleCycler";
 import Carousel from "@/components/Carousel";
@@ -356,7 +356,7 @@ export default function Home() {
 
         {/* ---------- LEADERSHIP ---------- */}
         <section id="leadership" className="wrap section">
-          <SectionHead index="06" label="Leadership & Honors" title="On campus and beyond." />
+          <SectionHead index="06" label="Leadership & Service" title="On campus and beyond." />
           <div className="lead-grid">
             <div className="lead-list">
               {leadership.map((l, i) => (
@@ -379,6 +379,12 @@ export default function Home() {
               </ul>
             </Reveal>
           </div>
+          {servicePhotos.length > 0 && (
+            <Reveal className="service-photos">
+              <p className="eyebrow also">Beyond the campus</p>
+              <Carousel photos={servicePhotos} />
+            </Reveal>
+          )}
         </section>
 
         {/* ---------- CONTACT ---------- */}
