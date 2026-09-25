@@ -41,6 +41,15 @@ export const links = {
   booking: "",
 };
 
+// ---------- CONTACT (closing section) ----------
+export const contact = {
+  headline: "Let’s work",
+  accent: "together.",
+  blurb:
+    "I’m looking for software engineering, security, and fintech internships for Summer 2027. Recruiters, founders, and fellow builders: my inbox is open.",
+  signoff: "Thanks for stopping by.",
+};
+
 export const about = {
   paragraphs: [
     "I'm a Computer Science student at North Carolina A&T (Class of 2029) who likes being useful in more than one room. Some days that means tuning CrowdStrike detections for client environments. Other days it's wiring an LLM into a product at 3 a.m. during a hackathon, or closing a deal for my agency.",
@@ -165,6 +174,35 @@ export const ventures = [
     cta: "Visit osworldd.com",
   },
 ];
+
+// ---------- TAEKWONDO ----------
+// Photos live in /public/tkd. size: "big" (2x2), "wide" (2x1), "tall" (1x2), or "" (1x1).
+// position (optional): which part of the photo to keep in frame, e.g. "center 20%".
+export const athletics = {
+  title: "Discipline, on the mat.",
+  intro: [
+    "Long before hackathons, there was the mat. Taekwondo taught me the habits I bring to everything else: show up, put in the reps, take the loss, and come back sharper.",
+    "It took me to national team trials, international competition, and two selections to the USA Taekwondo National Team.",
+  ],
+  achievements: [
+    { year: "2x", title: "USA Taekwondo National Team", detail: "Represented Team USA internationally" },
+    { year: "2023", title: "Gold, USA Taekwondo Team Trials", detail: "National team qualifier" },
+    { year: "2024", title: "Bronze, Costa Rica President's Cup", detail: "World Taekwondo G2 ranking event · Heredia, Costa Rica" },
+    { year: "2024", title: "Gold, AAU Junior Olympic Games", detail: "Greensboro, NC" },
+    { year: "2024", title: "AAU Senior Team", detail: "Selected to the national AAU senior squad" },
+  ],
+  photos: [
+    { src: "/tkd/kick-nationals.jpg", alt: "Miles landing a kick at USA Taekwondo Nationals", caption: "USA Taekwondo Nationals", size: "big", position: "" },
+    { src: "/tkd/costa-rica-match.jpg", alt: "Miles competing in Costa Rica", caption: "Costa Rica President's Cup", size: "tall", position: "" },
+    { src: "/tkd/team-usa-uniform.jpg", alt: "Team USA uniform and black belt embroidered with Miles Johnson", caption: "Team USA kit", size: "tall", position: "" },
+    { src: "/tkd/trials-gold.jpg", alt: "Miles with his coaches after winning gold at USA Taekwondo Team Trials", caption: "Team Trials gold, 2023", size: "big", position: "" },
+    { src: "/tkd/costa-rica-podium.jpg", alt: "Miles on the podium in Costa Rica", caption: "Podium, Costa Rica 2024", size: "", position: "center 40%" },
+    { src: "/tkd/spin-kick.jpg", alt: "Miles throwing a spinning kick", caption: "Spinning hook kick", size: "", position: "" },
+    { src: "/tkd/aau-jo-gold.jpg", alt: "Miles with his gold medal at the AAU Junior Olympic Games", caption: "AAU Junior Olympics gold, 2024", size: "wide", position: "center 18%" },
+    { src: "/tkd/team-usa.jpg", alt: "Team USA holding the American flag", caption: "Team USA", size: "wide", position: "" },
+    { src: "/tkd/aau-senior-team.jpg", alt: "2024 AAU Senior Team photo", caption: "2024 AAU Senior Team", size: "wide", position: "" },
+  ],
+};
 
 export const leadership = [
   {

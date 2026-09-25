@@ -1,4 +1,4 @@
-import { site, hero, stats, links, about, skills, experience, projects, startup, ventures, leadership, honors } from "@/content";
+import { site, hero, stats, links, about, skills, experience, projects, startup, ventures, athletics, leadership, honors, contact } from "@/content";
 import Reveal from "@/components/Reveal";
 import RoleCycler from "@/components/RoleCycler";
 
@@ -40,7 +40,8 @@ export default function Home() {
           <a href="#about">About</a>
           <a href="#experience">Experience</a>
           <a href="#startup">Startup</a>
-          <a href="#projects">Projects</a>
+          <a href="#projects">Hackathons</a>
+          <a href="#taekwondo">Taekwondo</a>
           <a href="#contact">Contact</a>
         </nav>
         <a className="btn btn-sm" href={site.resume} target="_blank" rel="noreferrer">
@@ -244,7 +245,7 @@ export default function Home() {
 
         {/* ---------- PROJECTS ---------- */}
         <section id="projects" className="wrap section">
-          <SectionHead index="04" label="Projects" title="Things I’ve shipped." />
+          <SectionHead index="04" label="Hackathon Projects" title="Built at hackathons." />
           <div className="projects">
             {projects.map((p, i) => (
               <Reveal key={p.name} delay={(i % 2) * 100} className={`project ${p.award ? "has-award" : ""}`}>
@@ -295,9 +296,41 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ---------- TAEKWONDO ---------- */}
+        <section id="taekwondo" className="wrap section">
+          <SectionHead index="05" label="Taekwondo" title={athletics.title} />
+          <div className="tkd-top">
+            <Reveal className="tkd-intro">
+              {athletics.intro.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </Reveal>
+            <Reveal delay={100} className="medals">
+              {athletics.achievements.map((a) => (
+                <div key={a.title} className="medal">
+                  <span className="medal-year">{a.year}</span>
+                  <div>
+                    <p className="medal-title">{a.title}</p>
+                    {a.detail && <p className="medal-detail">{a.detail}</p>}
+                  </div>
+                </div>
+              ))}
+            </Reveal>
+          </div>
+          <div className="gallery">
+            {athletics.photos.map((ph, i) => (
+              <Reveal key={ph.src} delay={(i % 4) * 70} className={`tile ${ph.size}`}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={ph.src} alt={ph.alt} loading="lazy" style={ph.position ? { objectPosition: ph.position } : undefined} />
+                <span className="tile-cap">{ph.caption}</span>
+              </Reveal>
+            ))}
+          </div>
+        </section>
+
         {/* ---------- LEADERSHIP ---------- */}
         <section id="leadership" className="wrap section">
-          <SectionHead index="05" label="Leadership & Honors" title="On campus and beyond." />
+          <SectionHead index="06" label="Leadership & Honors" title="On campus and beyond." />
           <div className="lead-grid">
             <div className="lead-list">
               {leadership.map((l, i) => (
@@ -324,40 +357,62 @@ export default function Home() {
 
         {/* ---------- CONTACT ---------- */}
         <section id="contact" className="wrap section contact">
-          <Reveal>
-            <div className="section-head">
-              <span className="sec-num" aria-hidden>06</span>
-              <p className="eyebrow">Contact</p>
+          <Reveal className="closer">
+            <div className="closer-main">
+              <div className="section-head">
+                <span className="sec-num" aria-hidden>07</span>
+                <p className="eyebrow">Contact</p>
+              </div>
+              <h2 className="contact-title">
+                {contact.headline} <span className="accent-line">{contact.accent}</span>
+              </h2>
+              <p className="intro">{contact.blurb}</p>
+              <a className="btn btn-primary closer-cta" href={`mailto:${links.email}`}>
+                Email me <Arrow />
+              </a>
             </div>
-            <h2 className="contact-title">
-              Let’s build <span className="accent-line">something.</span>
-            </h2>
-            <p className="intro">
-              Open to internships, research, and interesting projects. If you run a service business and miss calls, AutonomIQ can help with that too.
-            </p>
-            <div className="ctas">
-              <a className="btn btn-primary" href={`mailto:${links.email}`}>
-                {links.email} <Arrow />
+            <div className="closer-links">
+              <a className="clink" href={`mailto:${links.email}`}>
+                <span className="eyebrow">Email</span>
+                <span className="clink-val">{links.email}</span>
+                <Arrow />
+              </a>
+              <a className="clink" href={links.linkedin} target="_blank" rel="noreferrer">
+                <span className="eyebrow">LinkedIn</span>
+                <span className="clink-val">in/miles-c-johnson11</span>
+                <Arrow />
+              </a>
+              <a className="clink" href={links.github} target="_blank" rel="noreferrer">
+                <span className="eyebrow">GitHub</span>
+                <span className="clink-val">@Bebop1023</span>
+                <Arrow />
+              </a>
+              <a className="clink" href={site.resume} target="_blank" rel="noreferrer">
+                <span className="eyebrow">Resume</span>
+                <span className="clink-val">Download PDF</span>
+                <Arrow />
               </a>
               {links.booking && (
-                <a className="btn" href={links.booking} target="_blank" rel="noreferrer">
-                  Book a call
+                <a className="clink" href={links.booking} target="_blank" rel="noreferrer">
+                  <span className="eyebrow">Meet</span>
+                  <span className="clink-val">Book a call</span>
+                  <Arrow />
                 </a>
               )}
-              <a className="btn" href={links.linkedin} target="_blank" rel="noreferrer">
-                LinkedIn
-              </a>
-              <a className="btn" href={site.resume} target="_blank" rel="noreferrer">
-                Resume
-              </a>
             </div>
           </Reveal>
         </section>
       </main>
 
       <footer className="wrap footer">
-        <span className="mono muted">© {new Date().getFullYear()} {site.name}</span>
-        <span className="mono muted">Built with Next.js · {site.location}</span>
+        <div className="footer-sign">
+          <span className="footer-name">{site.name}</span>
+          <span className="accent-line footer-thanks">{contact.signoff}</span>
+        </div>
+        <div className="footer-meta">
+          <span className="mono muted">© {new Date().getFullYear()} · {site.location}</span>
+          <a className="mono to-top" href="#top">Back to top ↑</a>
+        </div>
       </footer>
     </>
   );
