@@ -191,7 +191,7 @@ export const athletics = {
     { year: "2023", title: "Gold, USA Taekwondo Team Trials", detail: "National team qualifier" },
     { year: "2024", title: "Bronze, Costa Rica President's Cup", detail: "World Taekwondo G2 ranking event · Heredia, Costa Rica" },
     { year: "2024", title: "Gold, AAU Junior Olympic Games", detail: "Greensboro, NC" },
-    { year: "2024", title: "AAU Senior Team", detail: "Selected to the national AAU senior squad" },
+    { year: "2024", title: "Gold, AAU Team Trials", detail: "Won trials to make the 2024 AAU Senior National Team" },
   ],
   photos: [
     { src: "/tkd/kick-nationals.jpg", alt: "Miles landing a kick at USA Taekwondo Nationals", caption: "USA Taekwondo Nationals", size: "big", position: "" },
