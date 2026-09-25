@@ -76,7 +76,7 @@ export const experience = [
       "Triaged 30+ endpoint and identity alerts weekly in CrowdStrike, building exclusion rules that significantly cut recurring false-positive noise across managed devices.",
       "Completed Zscaler zero trust training (ZIA, ZPA, ZDX) and shadowed engineers configuring access policies, SSL/TLS inspection, and App Connector Groups for live client environments.",
       "Supported CrowdStrike client onboarding: kickoff calls, product demos, and hands-on identity protection training.",
-      "Drafted security communications and document configuration changes supporting policy reviews, IdP migration, and version profile management.",
+      "Drafted security communications and documented configuration changes supporting policy reviews, IdP migration, and version profile management.",
     ],
     tags: ["CrowdStrike", "Zscaler", "Qualys", "Okta"],
   },
