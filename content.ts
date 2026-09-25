@@ -52,7 +52,7 @@ export const contact = {
 
 export const about = {
   paragraphs: [
-    "I'm a Computer Science student at North Carolina A&T (Class of 2029) who likes being useful in more than one room. Some days that means tuning CrowdStrike detections for client environments. Other days it's wiring an LLM into a product at 3 a.m. during a hackathon, or closing a deal for my agency.",
+    "I'm a Computer Science student at North Carolina A&T (Class of 2029) who likes being useful in more than one room. That has meant tuning CrowdStrike detections for client environments, wiring an LLM into a product at 3 a.m. during a hackathon, and closing deals for my startup.",
     "I'm staying broad on purpose: software engineering, security, AI, and business all feed each other. Building my own companies taught me to ship and sell. Working in security taught me how things break. Competing on the USA Taekwondo National Team taught me how to keep showing up.",
   ],
   // Chips shown under the About text
@@ -71,12 +71,12 @@ export const experience = [
     role: "Cyber & Security Operations Intern",
     org: "Ridge IT Cyber",
     link: "https://ridgeit.com",
-    dates: "May 2026 – Present",
+    dates: "Jun 2026 – Aug 2026",
     points: [
-      "Triage 30+ endpoint and identity alerts weekly in CrowdStrike, building exclusion rules that significantly cut recurring false-positive noise across managed devices.",
-      "Completed Zscaler zero trust training (ZIA, ZPA, ZDX) and shadow engineers configuring access policies, SSL/TLS inspection, and App Connector Groups for live client environments.",
-      "Support CrowdStrike client onboarding: kickoff calls, product demos, and hands-on identity protection training.",
-      "Draft security communications and document configuration changes supporting policy reviews, IdP migration, and version profile management.",
+      "Triaged 30+ endpoint and identity alerts weekly in CrowdStrike, building exclusion rules that significantly cut recurring false-positive noise across managed devices.",
+      "Completed Zscaler zero trust training (ZIA, ZPA, ZDX) and shadowed engineers configuring access policies, SSL/TLS inspection, and App Connector Groups for live client environments.",
+      "Supported CrowdStrike client onboarding: kickoff calls, product demos, and hands-on identity protection training.",
+      "Drafted security communications and document configuration changes supporting policy reviews, IdP migration, and version profile management.",
     ],
     tags: ["CrowdStrike", "Zscaler", "Qualys", "Okta"],
   },
