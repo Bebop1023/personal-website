@@ -16,6 +16,10 @@ export const site = {
   // Your headshot lives at /public/me.jpg. Swap the file to change it.
   photo: "/me.jpg",
   resume: "/Miles-Johnson-Resume.pdf",
+  // Picture of page 1 of the resume, shown in the Resume section near the top.
+  // When you swap the PDF, ask Claude to regenerate this image too.
+  resumePreview: "/resume-preview.jpg",
+  resumeUpdated: "Sept 2026",
 };
 
 export const hero = {
@@ -97,7 +101,7 @@ export const projects = [
     ],
     stack: ["Next.js", "TypeScript", "Python", "Claude API", "GPT-4o", "Whisper"],
     // image: a screenshot in /public/projects. Leave "" to show a styled placeholder.
-    image: "",
+    image: "/projects/pitchpad.jpg",
     link: "https://pitchpadapp.vercel.app/", // live site, demo video, or repo
     linkLabel: "Live site",
   },
@@ -172,6 +176,15 @@ export const ventures = [
     stack: ["Brand", "Shopify", "Marketing", "Operations"],
     link: "https://osworldd.com",
     cta: "Visit osworldd.com",
+    // Photos in /public/os, shown in a scrollable strip (same format as the Taekwondo photos)
+    photos: [
+      { src: "/os/01-running-the-business.jpg", alt: "Miles in an OS beanie working on his laptop next to a label printer", caption: "Running the business", size: "tall" },
+      { src: "/os/02-drop-lineup.jpg", alt: "OS beanies in four colors and OS//TEMPO shorts", caption: "The drop: beanies + OS//TEMPO shorts", size: "tall" },
+      { src: "/os/03-on-the-run.jpg", alt: "Runner in OS shorts passing a museum", caption: "OS//TEMPO on the move", size: "tall" },
+      { src: "/os/04-lookbook.jpg", alt: "Models wearing OS//TEMPO shorts on wooden steps", caption: "Lookbook shoot", size: "tall" },
+      { src: "/os/05-tempo-shorts.jpg", alt: "OS//TEMPO shorts laid on packaged inventory", caption: "OS//TEMPO shorts", size: "tall" },
+      { src: "/os/06-orders-shipped.jpg", alt: "A pile of packed OS orders ready to ship", caption: "Orders out the door", size: "tall" },
+    ],
   },
 ];
 

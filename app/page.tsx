@@ -112,6 +112,32 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ---------- RESUME ---------- */}
+        <section id="resume" className="wrap resume-sec">
+          <Reveal className="resume-card">
+            <a className="resume-thumb" href={site.resume} target="_blank" rel="noreferrer" aria-label="Open resume PDF">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={site.resumePreview} alt={`${site.name} resume, page 1`} loading="lazy" />
+              <span className="resume-open">Open PDF <Arrow /></span>
+            </a>
+            <div className="resume-info">
+              <p className="eyebrow"><span className="accent">Resume</span> · Updated {site.resumeUpdated}</p>
+              <h2>The one-page version.</h2>
+              <p className="muted">
+                Education, experience, hackathon projects, and leadership on a single page. Take a look, or grab a copy for later.
+              </p>
+              <div className="ctas">
+                <a className="btn btn-primary" href={site.resume} target="_blank" rel="noreferrer">
+                  View resume <Arrow />
+                </a>
+                <a className="btn" href={site.resume} download="Miles-Johnson-Resume.pdf">
+                  Download PDF
+                </a>
+              </div>
+            </div>
+          </Reveal>
+        </section>
+
         {/* ---------- ABOUT ---------- */}
         <section id="about" className="wrap section">
           <SectionHead index="01" label="About" title="Builder first. Specialist later." />
@@ -237,6 +263,11 @@ export default function Home() {
                     <a className="btn venture-btn" href={v.link} target="_blank" rel="noreferrer">
                       {v.cta} <Arrow />
                     </a>
+                    {v.photos && v.photos.length > 0 && (
+                      <div className="venture-photos">
+                        <Carousel photos={v.photos} />
+                      </div>
+                    )}
                   </Reveal>
                 ))}
               </div>

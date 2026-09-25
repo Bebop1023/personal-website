@@ -153,6 +153,30 @@ main { overflow-x: clip; }
 .stat-value { font-family: var(--font-display); font-weight: 800; font-size: 40px; line-height: 1; color: var(--accent); }
 .stat-label { font-size: 13.5px; color: var(--muted); }
 
+/* Resume */
+.resume-sec { padding-top: 72px; }
+.resume-card {
+  display: grid; grid-template-columns: 300px 1fr; gap: 48px; align-items: center;
+  padding: 32px; border-radius: 24px; border: 1px solid var(--line);
+  background: radial-gradient(circle at 100% 50%, rgba(245, 184, 41, 0.08), transparent 55%), var(--surface);
+}
+.resume-thumb {
+  position: relative; display: block; aspect-ratio: 8.5 / 11; overflow: hidden; border-radius: 10px;
+  background: #fff; box-shadow: 0 24px 60px -24px rgba(0, 0, 0, 0.8); transform: rotate(-2deg);
+  transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.resume-thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+.resume-thumb:hover { transform: rotate(0deg) translateY(-4px); }
+.resume-open {
+  position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%);
+  display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 999px;
+  background: rgba(7, 11, 22, 0.88); color: var(--accent); font-size: 13px; font-weight: 600; opacity: 0; transition: opacity 0.25s;
+}
+.resume-thumb:hover .resume-open { opacity: 1; }
+.resume-info h2 { margin-top: 10px; font-size: clamp(30px, 3.6vw, 44px); font-weight: 700; letter-spacing: -0.03em; }
+.resume-info .muted { margin-top: 12px; max-width: 460px; font-size: 16.5px; }
+.resume-info .ctas { margin-top: 24px; }
+
 /* ============ Sections ============ */
 .section { padding-top: 120px; }
 .section-head { margin-bottom: 48px; display: flex; align-items: flex-end; gap: 22px; }
@@ -234,6 +258,10 @@ main { overflow-x: clip; }
 .ventures:has(> :only-child) .venture > .venture-desc { grid-row: 1 / span 2; }
 .ventures:has(> :only-child) .venture > .chips { grid-row: 3; }
 .ventures:has(> :only-child) .venture > .venture-btn { grid-row: 4; justify-self: start; }
+.ventures:has(> :only-child) .venture > .venture-photos { grid-column: 1 / -1; grid-row: 5; }
+.venture-photos { margin-top: 18px; min-width: 0; }
+.venture-photos .slide { height: 400px; }
+.venture-photos .slide.tall { width: 290px; }
 
 /* Featured startup */
 .startup {
@@ -365,10 +393,15 @@ main { overflow-x: clip; }
   .startup { padding: 28px; }
   .tkd-top { grid-template-columns: 1fr; gap: 24px; }
   .closer { grid-template-columns: 1fr; padding: 28px; gap: 28px; }
+  .resume-card { grid-template-columns: 1fr; gap: 28px; padding: 24px; }
+  .resume-thumb { max-width: 240px; }
+  .resume-sec { padding-top: 56px; }
   .footer-meta { align-items: flex-start; }
   .slide { width: 78vw; height: 360px; }
   .slide.wide, .slide.big { width: 86vw; }
   .slide.tall { width: 64vw; }
+  .venture-photos .slide { height: 360px; }
+  .venture-photos .slide.tall { width: 62vw; }
   .ventures:has(> :only-child) .venture { display: flex; }
   .portrait { max-width: 340px; order: -1; aspect-ratio: 1; box-shadow: 12px 12px 0 -1px var(--bg), 12px 12px 0 0 var(--accent); }
   .stats { grid-template-columns: repeat(2, 1fr); margin-top: 48px; }
