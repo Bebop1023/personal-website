@@ -75,7 +75,7 @@ export const experience = [
     role: "Cyber & Security Operations Intern",
     org: "Ridge IT Cyber",
     link: "https://ridgeit.com",
-    dates: "Jun 2026 – Aug 2026",
+    dates: "May 2026 – Aug 2026",
     points: [
       "Triaged 30+ endpoint and identity alerts weekly in CrowdStrike, building exclusion rules that significantly cut recurring false-positive noise across managed devices.",
       "Completed Zscaler zero trust training (ZIA, ZPA, ZDX) and shadowed engineers configuring access policies, SSL/TLS inspection, and App Connector Groups for live client environments.",
