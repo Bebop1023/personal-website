@@ -13,8 +13,8 @@ export const site = {
     "Computer Science student at North Carolina A&T building AI products, working in cybersecurity operations, and running two businesses.",
   url: "https://milesjohnson.vercel.app", // change once you have a custom domain
   location: "Greensboro, NC",
-  // Put a photo in /public (e.g. /public/me.jpg) and set photo: "/me.jpg"
-  photo: "",
+  // Your headshot lives at /public/me.jpg. Swap the file to change it.
+  photo: "/me.jpg",
   resume: "/Miles-Johnson-Resume.pdf",
 };
 
@@ -87,7 +87,10 @@ export const projects = [
       "Architected 12+ REST APIs with JWT auth for multi-user decks, coaching sessions, and live slide generation.",
     ],
     stack: ["Next.js", "TypeScript", "Python", "Claude API", "GPT-4o", "Whisper"],
-    link: "", // add a demo or repo link here
+    // image: a screenshot in /public/projects. Leave "" to show a styled placeholder.
+    image: "",
+    link: "https://pitchpadapp.vercel.app/", // live site, demo video, or repo
+    linkLabel: "Live site",
   },
   {
     name: "ScholarSync",
@@ -101,7 +104,9 @@ export const projects = [
       "Engineered a voice-enabled advisor (Whisper, GPT-4o, TTS) delivering personalized budgeting and career guidance.",
     ],
     stack: ["Next.js", "TypeScript", "Python", "GPT-4o", "Whisper", "TTS"],
-    link: "",
+    image: "/projects/scholarsync.jpg",
+    link: "https://scholar-sync1.vercel.app/",
+    linkLabel: "Live site",
   },
   {
     name: "Heart Care AI",
@@ -116,7 +121,9 @@ export const projects = [
       "Engineered Supabase auth and real-time dashboards for secure patient monitoring.",
     ],
     stack: ["Python", "Flask", "FastAPI", "JavaScript", "OpenAI", "Supabase"],
+    image: "",
     link: "",
+    linkLabel: "",
   },
   {
     name: "Stryde",
@@ -127,7 +134,9 @@ export const projects = [
       "Mobile app that lets coaches push live training plans, practice schedules, diet plans, and recovery routines straight to their athletes, even offline.",
     points: [],
     stack: ["TypeScript", "Mobile"],
+    image: "",
     link: "https://github.com/Bebop1023/Stryde",
+    linkLabel: "GitHub",
   },
 ];
 

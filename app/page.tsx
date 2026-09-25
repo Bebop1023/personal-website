@@ -176,6 +176,20 @@ export default function Home() {
           <div className="projects">
             {projects.map((p, i) => (
               <Reveal key={p.name} delay={(i % 2) * 100} className={`project ${p.award ? "has-award" : ""}`}>
+                <div className="project-shot">
+                  <div className="shot-bar" aria-hidden>
+                    <i /><i /><i />
+                    <span>{p.link ? p.link.replace(/^https?:\/\//, "").replace(/\/$/, "") : p.name.toLowerCase()}</span>
+                  </div>
+                  {p.image ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={p.image} alt={`${p.name} screenshot`} loading="lazy" />
+                  ) : (
+                    <div className="shot-fallback" aria-hidden>
+                      <span>{p.name}</span>
+                    </div>
+                  )}
+                </div>
                 <div className="project-top">
                   <span className="mono muted">{p.event}</span>
                   <span className="mono muted">{p.date}</span>
@@ -200,7 +214,7 @@ export default function Home() {
                   </div>
                   {p.link && (
                     <a className="link" href={p.link} target="_blank" rel="noreferrer">
-                      View <Arrow />
+                      {p.linkLabel || "View"} <Arrow />
                     </a>
                   )}
                 </div>
