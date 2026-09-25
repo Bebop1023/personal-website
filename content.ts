@@ -11,7 +11,7 @@ export const site = {
   title: "Miles Johnson | Software, Security & Founder",
   description:
     "Computer Science student at North Carolina A&T building AI products, working in cybersecurity operations, and running two businesses.",
-  url: "https://milesjohnson.vercel.app", // change once you have a custom domain
+  url: "https://www.milesjohnson.site",
   location: "Greensboro, NC",
   // Your headshot lives at /public/me.jpg. Swap the file to change it.
   photo: "/me.jpg",
