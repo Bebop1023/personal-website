@@ -172,7 +172,7 @@ export default function Home() {
 
         {/* ---------- EXPERIENCE ---------- */}
         <section id="experience" className="wrap section">
-          <SectionHead index="02" label="Experience" title="Where I work." />
+          <SectionHead index="02" label="Experience" title="Work Experience." />
           <div className="timeline">
             {experience.map((job) => (
               <Reveal key={job.role + job.org} className="job">

@@ -559,3 +559,7 @@ main { overflow-x: clip; }
   .progress { display: none; }
   .reveal li, .reveal .chip, .reveal .medal, .reveal .clink, .startup .bubble, .startup .call-foot span, .section-head .sec-num, .fade-img { opacity: 1 !important; transform: none !important; filter: none !important; }
 }
+
+/* Keep the OS photo strip inside its card so it can scroll sideways on phones */
+.venture > * { min-width: 0; max-width: 100%; }
+.venture-photos { width: 100%; }
