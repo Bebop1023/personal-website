@@ -483,3 +483,79 @@ main { overflow-x: clip; }
   .clink { grid-template-columns: 78px minmax(0, 1fr) auto; gap: 8px; }
   .clink .eyebrow { font-size: 11px; letter-spacing: 0.08em; }
 }
+
+/* ============ Smooth motion layer ============ */
+.progress {
+  position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 60; transform-origin: 0 50%; transform: scaleX(0);
+  background: linear-gradient(90deg, var(--accent), #ffd66b); box-shadow: 0 0 12px rgba(245, 184, 41, 0.6);
+}
+.nav { transition: background 0.3s, box-shadow 0.3s, padding 0.3s; }
+.nav.scrolled { background: rgba(7, 11, 22, 0.88); box-shadow: 0 10px 30px -18px rgba(0, 0, 0, 0.9); }
+.nav nav a { position: relative; transition: color 0.2s, background 0.2s, border-color 0.2s; }
+.nav nav a.active { color: var(--accent); }
+@media (min-width: 901px) {
+  .nav nav a::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 2px; border-radius: 2px;
+    background: var(--accent); transform: scaleX(0); transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .nav nav a:hover::after, .nav nav a.active::after { transform: scaleX(1); }
+}
+@media (max-width: 900px) { .nav nav a.active { border-color: rgba(245, 184, 41, 0.5); background: var(--accent-soft); } }
+
+/* Cursor spotlight on cards */
+.spot { position: relative; isolation: isolate; }
+.spot::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: -1; opacity: 0;
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(245, 184, 41, 0.09), transparent 60%);
+  transition: opacity 0.35s;
+}
+.spot:hover::before { opacity: 1; }
+
+/* Images fade in once loaded */
+.fade-img { opacity: 0; filter: blur(8px); transition: opacity 0.7s ease, filter 0.7s ease; }
+.fade-img.loaded { opacity: 1; filter: none; }
+
+/* Staggered reveals: list items and chips cascade in after their card appears */
+.reveal li, .reveal .chip, .reveal .medal, .reveal .clink, .reveal .stat-value {
+  transition: opacity 0.6s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.reveal:not(.in) li, .reveal:not(.in) .chip, .reveal:not(.in) .medal, .reveal:not(.in) .clink { opacity: 0; transform: translateY(10px); }
+.reveal.in li:nth-child(1), .reveal.in .chip:nth-child(1), .reveal.in .medal:nth-child(1), .reveal.in .clink:nth-child(1) { transition-delay: 0.10s; }
+.reveal.in li:nth-child(2), .reveal.in .chip:nth-child(2), .reveal.in .medal:nth-child(2), .reveal.in .clink:nth-child(2) { transition-delay: 0.16s; }
+.reveal.in li:nth-child(3), .reveal.in .chip:nth-child(3), .reveal.in .medal:nth-child(3), .reveal.in .clink:nth-child(3) { transition-delay: 0.22s; }
+.reveal.in li:nth-child(4), .reveal.in .chip:nth-child(4), .reveal.in .medal:nth-child(4), .reveal.in .clink:nth-child(4) { transition-delay: 0.28s; }
+.reveal.in li:nth-child(5), .reveal.in .chip:nth-child(5), .reveal.in .medal:nth-child(5), .reveal.in .clink:nth-child(5) { transition-delay: 0.34s; }
+.reveal.in li:nth-child(6), .reveal.in .chip:nth-child(6), .reveal.in .medal:nth-child(6), .reveal.in .clink:nth-child(6) { transition-delay: 0.40s; }
+.reveal.in li:nth-child(n+7), .reveal.in .chip:nth-child(n+7), .reveal.in .medal:nth-child(n+7) { transition-delay: 0.46s; }
+
+/* Section numbers slide in */
+.section-head .sec-num { display: inline-block; transition: transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1), opacity 0.9s; }
+.section-head.reveal:not(.in) .sec-num { transform: translateX(-24px); opacity: 0; }
+
+/* AutonomIQ demo call plays out message by message */
+@keyframes bubbleIn { from { opacity: 0; transform: translateY(10px) scale(0.97); } to { opacity: 1; transform: none; } }
+.startup.reveal .bubble, .startup.reveal .call-foot span { opacity: 0; }
+.startup.reveal.in .bubble, .startup.reveal.in .call-foot span { animation: bubbleIn 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) forwards; }
+.startup.reveal.in .bubble:nth-child(1) { animation-delay: 0.4s; }
+.startup.reveal.in .bubble:nth-child(2) { animation-delay: 1.3s; }
+.startup.reveal.in .bubble:nth-child(3) { animation-delay: 2.2s; }
+.startup.reveal.in .bubble:nth-child(4) { animation-delay: 2.9s; }
+.startup.reveal.in .call-foot span:nth-child(1) { animation-delay: 3.6s; }
+.startup.reveal.in .call-foot span:nth-child(2) { animation-delay: 3.8s; }
+.startup.reveal.in .call-foot span:nth-child(3) { animation-delay: 4.0s; }
+
+/* Buttons: smooth press + arrow nudge */
+.btn { transition: transform 0.25s cubic-bezier(0.2, 0.7, 0.2, 1), border-color 0.2s, background 0.2s, box-shadow 0.25s; }
+.btn-primary:hover { box-shadow: 0 10px 30px -10px rgba(245, 184, 41, 0.55); }
+.btn:active { transform: translateY(0) scale(0.97); }
+.btn svg, .link svg { transition: transform 0.25s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.btn:hover svg, .link:hover svg { transform: translate(2px, -2px); }
+
+/* Portrait gently floats */
+@keyframes floaty { 0%, 100% { translate: 0 0; } 50% { translate: 0 -8px; } }
+.portrait { animation-name: rise-tilt, floaty; animation-duration: 0.8s, 7s; animation-delay: 300ms, 1.2s; animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1), ease-in-out; animation-iteration-count: 1, infinite; animation-fill-mode: forwards, none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .progress { display: none; }
+  .reveal li, .reveal .chip, .reveal .medal, .reveal .clink, .startup .bubble, .startup .call-foot span, .section-head .sec-num, .fade-img { opacity: 1 !important; transform: none !important; filter: none !important; }
+}

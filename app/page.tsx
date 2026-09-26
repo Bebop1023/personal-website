@@ -2,6 +2,7 @@ import { site, hero, stats, links, about, skills, experience, projects, startup,
 import Reveal from "@/components/Reveal";
 import RoleCycler from "@/components/RoleCycler";
 import Carousel from "@/components/Carousel";
+import Motion from "@/components/Motion";
 
 function Arrow() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
   return (
     <>
       <div className="grain" aria-hidden />
+      <Motion />
 
       <header className="nav">
         <a href="#top" className="mark" aria-label="Back to top">
@@ -87,7 +89,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="portrait load" style={{ animationDelay: "300ms" }}>
+            <div className="portrait load">
               {site.photo ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img src={site.photo} alt={site.name} />
