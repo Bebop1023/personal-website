@@ -206,7 +206,7 @@ export const athletics = {
     { year: "2024", title: "Gold, AAU Junior Olympic Games (Team Trials)", detail: "Won to make the 2024 AAU Senior National Team · Greensboro, NC" },
   ],
   photos: [
-    { src: "/tkd/kick-nationals.jpg", alt: "Miles landing a kick at USA Taekwondo Nationals", caption: "USA Taekwondo Nationals", size: "big", position: "" },
+    { src: "/tkd/kick-nationals.jpg", alt: "Miles landing a kick on his way to gold at East Regionals", caption: "East Regionals gold", size: "big", position: "" },
     { src: "/tkd/costa-rica-match.jpg", alt: "Miles competing in Costa Rica", caption: "Costa Rica President's Cup", size: "tall", position: "" },
     { src: "/tkd/team-usa-uniform.jpg", alt: "Team USA uniform and black belt embroidered with Miles Johnson", caption: "Team USA kit", size: "tall", position: "" },
     { src: "/tkd/trials-gold.jpg", alt: "Miles with his coaches after winning gold at USA Taekwondo Team Trials", caption: "Team Trials gold, 2023", size: "big", position: "" },
