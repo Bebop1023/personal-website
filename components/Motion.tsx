@@ -29,6 +29,7 @@ export default function Motion() {
     cleanups.push(() => removeEventListener("scroll", onScroll));
 
     // 2) Highlight the nav link for the section on screen
+    const menu = document.querySelector<HTMLElement>(".nav nav");
     const links = [...document.querySelectorAll<HTMLAnchorElement>(".nav nav a")];
     const sections = links
       .map((a) => document.querySelector<HTMLElement>(a.getAttribute("href") || ""))
@@ -40,7 +41,12 @@ export default function Motion() {
           links.forEach((a) => {
             const on = a.getAttribute("href") === `#${e.target.id}`;
             a.classList.toggle("active", on);
-            if (on && innerWidth < 900) a.scrollIntoView({ block: "nearest", inline: "center", behavior: reduce ? "auto" : "smooth" });
+            // Center the active pill in the phone menu by scrolling ONLY the menu row.
+            // (scrollIntoView here would interrupt the page's own scrolling on iPhones.)
+            if (on && innerWidth < 900 && menu) {
+              const left = a.offsetLeft - (menu.clientWidth - a.offsetWidth) / 2;
+              menu.scrollTo({ left, behavior: "auto" });
+            }
           });
         });
       },

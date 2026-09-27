@@ -9,12 +9,13 @@ export default function Reveal({ children, delay = 0, className = "" }: { childr
     if (!el) return;
     const io = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        // Reveal when on screen, or if the visitor already scrolled/jumped past it
+        if (entry.isIntersecting || entry.boundingClientRect.bottom < 0) {
           el.classList.add("in");
           io.disconnect();
         }
       },
-      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+      { threshold: 0, rootMargin: "0px 0px 10% 0px" }
     );
     io.observe(el);
     return () => io.disconnect();

@@ -62,13 +62,16 @@ export default function Home() {
               <p className="status load" style={{ animationDelay: "0ms" }}>
                 <span className="dot" /> {hero.status}
               </p>
-              <h1 className="load" style={{ animationDelay: "120ms" }}>
+              <h1 className="hero-name load" style={{ animationDelay: "60ms" }}>
+                {site.name} <span className="muted">· Computer Science @ NC A&amp;T</span>
+              </h1>
+              <p className="hero-title load" style={{ animationDelay: "120ms" }}>
                 {hero.headline.map((line, i) => (
                   <span key={i} className={i === hero.headline.length - 1 ? "accent-line" : ""}>
                     {line}
                   </span>
                 ))}
-              </h1>
+              </p>
               <p className="role-line load" style={{ animationDelay: "260ms" }}>
                 <span className="prompt">$ whoami</span> <RoleCycler roles={hero.roles} />
               </p>

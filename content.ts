@@ -8,9 +8,18 @@
 export const site = {
   name: "Miles Johnson",
   // Short line shown in browser tabs and link previews
-  title: "Miles Johnson | Software, Security & Founder",
+  title: "Miles Johnson | Software Engineer, AI Builder & Founder | NC A&T",
+  // Shown under your name in Google results (keep it under ~160 characters)
   description:
-    "Computer Science student at North Carolina A&T building AI products, working in cybersecurity operations, and running two businesses.",
+    "Miles Johnson is a Computer Science student at North Carolina A&T, co-founder of AutonomIQ, a hackathon-winning AI builder, and a former cybersecurity intern.",
+  // Words people might search to find you
+  keywords: [
+    "Miles Johnson", "Miles Chance Johnson", "Miles Johnson NC A&T", "North Carolina A&T computer science",
+    "software engineer", "AI developer", "cybersecurity", "AutonomIQ", "Operating System clothing", "OS//TEMPO",
+    "PitchPad", "ScholarSync", "HBCU", "Greensboro NC", "USA Taekwondo",
+  ],
+  // Google Search Console verification code (leave "" until you have one)
+  googleVerification: "",
   url: "https://www.milesjohnson.site",
   location: "Greensboro, NC",
   // Your headshot lives at /public/me.jpg. Swap the file to change it.

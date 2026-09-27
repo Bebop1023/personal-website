@@ -108,10 +108,10 @@ main { overflow-x: clip; }
 .dot { width: 8px; height: 8px; border-radius: 50%; background: #3ddc84; box-shadow: 0 0 0 0 rgba(61, 220, 132, 0.6); animation: ping 2s infinite; }
 @keyframes ping { 70% { box-shadow: 0 0 0 8px rgba(61, 220, 132, 0); } 100% { box-shadow: 0 0 0 0 rgba(61, 220, 132, 0); } }
 
-.hero h1 { margin-top: 28px; font-size: clamp(36px, 5.4vw, 76px); font-weight: 800; letter-spacing: -0.035em; }
-.hero h1 .accent-line { font-size: 1.18em; line-height: 0.95; }
-@media (min-width: 901px) { .hero h1 span { white-space: nowrap; } }
-.hero h1 span { display: block; }
+.hero .hero-title { font-family: var(--font-display), sans-serif; line-height: 1.05; margin-top: 28px; font-size: clamp(36px, 5.4vw, 76px); font-weight: 800; letter-spacing: -0.035em; }
+.hero .hero-title .accent-line { font-size: 1.18em; line-height: 0.95; }
+@media (min-width: 901px) { .hero .hero-title span { white-space: nowrap; } }
+.hero .hero-title span { display: block; }
 .accent-line { color: var(--accent); font-family: var(--font-serif), serif; font-style: italic; font-weight: 400; letter-spacing: -0.01em; }
 .role-line { margin-top: 26px; font-family: var(--font-mono); font-size: 15px; color: var(--text); }
 .prompt { color: var(--muted); margin-right: 6px; }
@@ -458,7 +458,7 @@ main { overflow-x: clip; }
   html { scroll-padding-top: 124px; }
   .hero { padding-top: 28px; }
   .portrait { max-width: 280px; }
-  .hero h1 { font-size: clamp(34px, 10vw, 48px); }
+  .hero .hero-title { font-family: var(--font-display), sans-serif; line-height: 1.05; font-size: clamp(34px, 10vw, 48px); }
   .intro { font-size: 16.5px; }
   .socials a { padding: 10px 2px; }
   .link { padding: 10px 0; }
@@ -563,3 +563,24 @@ main { overflow-x: clip; }
 /* Keep the OS photo strip inside its card so it can scroll sideways on phones */
 .venture > * { min-width: 0; max-width: 100%; }
 .venture-photos { width: 100%; }
+
+/* Name line above the headline (also the page's main heading for Google) */
+.hero-name { margin-top: 24px; font-family: var(--font-mono), monospace; font-size: 14px; font-weight: 500; letter-spacing: 0.04em; color: var(--accent); line-height: 1.4; }
+.hero-name .muted { color: var(--muted); }
+.hero .hero-title { margin-top: 12px; }
+
+/* Phones: lighter, quicker reveals so fast scrolling never lands on blank space */
+@media (max-width: 900px) {
+  .reveal { transform: translateY(12px); transition-duration: 0.45s; }
+  .reveal li, .reveal .chip, .reveal .medal, .reveal .clink { transition-duration: 0.35s; }
+  .reveal.in li, .reveal.in .chip, .reveal.in .medal, .reveal.in .clink { transition-delay: 0s !important; }
+  .section-head.reveal:not(.in) .sec-num { transform: none; }
+  .spot::before { display: none; }
+}
+@media (max-width: 900px) {
+  .startup.reveal.in .bubble:nth-child(1) { animation-delay: 0.1s; }
+  .startup.reveal.in .bubble:nth-child(2) { animation-delay: 0.45s; }
+  .startup.reveal.in .bubble:nth-child(3) { animation-delay: 0.8s; }
+  .startup.reveal.in .bubble:nth-child(4) { animation-delay: 1.1s; }
+  .startup.reveal.in .call-foot span { animation-delay: 1.4s !important; }
+}
