@@ -1,46 +1,27 @@
-# Miles Johnson: Personal Website
+# milesjohnson.site
 
-Built with Next.js. Hosted on Vercel. Every push to `main` goes live automatically.
+Personal portfolio of **Miles Johnson**: Computer Science student at North Carolina A&T, co-founder of AutonomIQ, hackathon-winning AI builder, and 2x USA Taekwondo National Team member.
 
-## How to update the site
+**Live site:** https://www.milesjohnson.site
 
-**Almost everything lives in `content.ts`.** Open it, change the text, save, push.
+## Built with
 
-| Want to change... | Edit this in `content.ts` |
-| --- | --- |
-| Headline, status line, intro | `hero` |
-| The 4 big numbers | `stats` |
-| Email, LinkedIn, GitHub, booking link | `links` |
-| About text + focus chips | `about` |
-| Skills | `skills` |
-| Jobs / internships | `experience` |
-| Projects | `projects` |
-| AutonomIQ / Operating System | `ventures` |
-| Clubs, roles | `leadership` |
-| Honors | `honors` |
+- Next.js 15 (App Router) and React 19
+- TypeScript
+- Hand-written CSS with custom scroll and reveal animations
+- Deployed on Vercel
 
-**To add a new item** (job, project, etc.): copy an existing `{ ... }` block, paste it right after, keep the comma between blocks, and change the text. Items show up in the order they're listed, so put the newest first.
+## Highlights
 
-**Resume:** replace `public/Miles-Johnson-Resume.pdf` with the new file (same name).
+- Fully responsive layout with a swipeable section menu on phones
+- Scroll-triggered animations that respect reduced-motion settings
+- Structured data, sitemap, and social share images for search and link previews
 
-**Photo:** drop a photo in `public/` (e.g. `me.jpg`) and set `photo: "/me.jpg"` in `site`.
+## Contact
 
-**Colors:** the theme lives at the top of `app/globals.css` (`--accent` is the gold).
+- Email: miles.chance.johnson@gmail.com
+- LinkedIn: https://www.linkedin.com/in/miles-c-johnson11
 
-## Run it on your Mac
+---
 
-```bash
-npm install
-npm run dev     # then open http://localhost:3000
-```
-
-## Project layout
-
-```
-content.ts            <- all the words on the site
-app/page.tsx          <- page layout (sections)
-app/globals.css       <- all styling
-app/layout.tsx        <- fonts, page title, link previews
-components/           <- scroll animations + typing effect
-public/               <- resume, photos
-```
+© 2026 Miles Johnson. All rights reserved. The code, design, writing, and photos in this repository are not licensed for reuse.
