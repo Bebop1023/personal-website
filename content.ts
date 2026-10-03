@@ -157,7 +157,7 @@ export const startup = {
   description:
     "AutonomIQ is my startup. Local service businesses lose jobs every time a call goes to voicemail, so we built an AI receptionist that picks up 24/7, answers questions, recovers missed calls, and books the appointment on the spot.",
   highlights: [
-    "Own the product build for an AI voice receptionist sold to local trade businesses, shipped on Vapi, Make, Twilio, and Google Calendar across 3 subscription tiers priced $297 to $897 per month.",
+    "Own the product build for an AI voice receptionist sold to local trade businesses, shipped on Vapi, Make, Twilio, and Google Calendar.",
     "Found a silent failure in a vendor calendar integration that had never been OAuth-connected, then rebuilt booking, availability, and live transfer as custom routed tools verified on live end-to-end calls.",
     "Directed compliance and launch setup: LLC filing, Twilio A2P brand registration, two-party-consent recording disclosures, and per-client data isolation.",
   ],
