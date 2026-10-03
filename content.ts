@@ -74,8 +74,8 @@ export const about = {
 
 export const skills = [
   { group: "Languages", items: ["Python", "TypeScript", "JavaScript", "C++", "Java"] },
-  { group: "Frameworks & Tools", items: ["Next.js", "React", "Flask", "FastAPI", "REST APIs", "JWT Auth", "Supabase", "Git/GitHub"] },
-  { group: "AI / ML", items: ["OpenAI API", "Claude API", "Whisper", "Text-to-Speech", "Vapi", "Make.com"] },
+  { group: "Frameworks & Tools", items: ["Next.js", "React", "Flask", "FastAPI", "REST APIs", "JWT Auth", "Supabase (Postgres)", "SQLite", "Git/GitHub"] },
+  { group: "AI Tools", items: ["Claude Code", "Codex", "Claude API", "OpenAI API", "Whisper", "Text-to-Speech", "Vapi", "Make.com"] },
   { group: "Security", items: ["CrowdStrike Falcon", "Zscaler ZIA / ZPA / ZDX", "Qualys", "Okta"] },
 ];
 
@@ -86,10 +86,9 @@ export const experience = [
     link: "https://ridgeit.com",
     dates: "May 2026 – Aug 2026",
     points: [
-      "Triaged 30+ endpoint and identity alerts weekly in CrowdStrike, building exclusion rules that significantly cut recurring false-positive noise across managed devices.",
-      "Completed Zscaler zero trust training (ZIA, ZPA, ZDX) and shadowed engineers configuring access policies, SSL/TLS inspection, and App Connector Groups for live client environments.",
-      "Supported CrowdStrike client onboarding: kickoff calls, product demos, and hands-on identity protection training.",
-      "Drafted security communications and documented configuration changes supporting policy reviews, IdP migration, and version profile management.",
+      "Triaged 30+ endpoint and identity alerts weekly in CrowdStrike, spotting recurring benign patterns and applying exclusion rules that cut false-positive volume across 500+ managed client devices.",
+      "Onboarded 2 client environments onto CrowdStrike Falcon end to end: tenant provisioning, sensor deployment via GPO, RMM, and MDM, prevention policy tuning, and migration off legacy EDR tools.",
+      "Completed Zscaler zero trust training (ZIA, ZPA, ZDX) and documented configuration changes supporting policy reviews, IdP migration, and version profile management across client environments.",
     ],
     tags: ["CrowdStrike", "Zscaler", "Qualys", "Okta"],
   },
@@ -152,15 +151,15 @@ export const projects = [
 // ---------- STARTUP (featured "Founder" section) ----------
 export const startup = {
   name: "AutonomIQ",
-  role: "Co-Founder · Product & Voice AI Lead",
+  role: "Co-Founder · Product Lead",
   since: "2026",
   tagline: "Every call answered. Every opportunity captured.",
   description:
     "AutonomIQ is my startup. Local service businesses lose jobs every time a call goes to voicemail, so we built an AI receptionist that picks up 24/7, answers questions, recovers missed calls, and books the appointment on the spot.",
   highlights: [
-    "Built the core product: a voice agent that checks live calendar availability, books jobs mid-call, and transfers emergencies to the owner.",
-    "Took it from idea to a registered LLC with a live site, published pricing, and an approved business texting brand.",
-    "Lead product and sales on a three-person founding team, plus the automation suite for reminders, reviews, and payment links.",
+    "Own the product build for an AI voice receptionist sold to local trade businesses, shipped on Vapi, Make, Twilio, and Google Calendar across 3 subscription tiers priced $297 to $897 per month.",
+    "Found a silent failure in a vendor calendar integration that had never been OAuth-connected, then rebuilt booking, availability, and live transfer as custom routed tools verified on live end-to-end calls.",
+    "Directed compliance and launch setup: LLC filing, Twilio A2P brand registration, two-party-consent recording disclosures, and per-client data isolation.",
   ],
   stack: ["Vapi", "Make.com", "Twilio", "Google Calendar", "LLMs"],
   link: "https://autonomiq.llc",
@@ -205,9 +204,10 @@ export const athletics = {
   title: "Discipline, on the mat.",
   intro: [
     "Long before hackathons, there was the mat. Taekwondo taught me the habits I bring to everything else: show up, put in the reps, take the loss, and come back sharper.",
-    "It took me to national team trials, international competition, 11 national medals (4 gold), and two selections to the USA Taekwondo National Team.",
+    "It took me to a #1 U.S. ranking, international competition, 11 national medals (4 gold), and two selections to the USA Taekwondo National Team.",
   ],
   achievements: [
+    { year: "#1", title: "Former #1 U.S. Ranking", detail: "Ranked first in the country" },
     { year: "11x", title: "National Medalist", detail: "4 gold medals at the national level" },
     { year: "2x", title: "USA Taekwondo National Team", detail: "Represented Team USA internationally" },
     { year: "2023", title: "Gold, USA Taekwondo Team Trials", detail: "National team qualifier" },
@@ -233,7 +233,7 @@ export const leadership = [
     org: "ACM · NC A&T",
     dates: "Mar 2026 – Present",
     detail:
-      "Design and lead a cybersecurity workshop each semester (network security, endpoint protection, ethical hacking) and co-facilitate ~5 general meetings per semester.",
+      "Lead a cybersecurity workshop each semester for roughly 50 ACM members (network security, endpoint protection, ethical hacking) and co-facilitate about 5 general meetings per term.",
   },
   {
     role: "Social Media Chair",
@@ -269,6 +269,6 @@ export const serviceGroups = [
 export const honors = [
   "Chancellor's List (Fall 2025)",
   "Aggie Merit Scholarship",
-  "2x USA Taekwondo National Team",
+  "2x USA Taekwondo National Team, former #1 U.S. rank",
   "Member: ACM, Project Renaissance, Noble Brothers & Sisters, SpeakOut",
 ];
