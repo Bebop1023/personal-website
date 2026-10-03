@@ -28,7 +28,7 @@ export const site = {
   // Picture of page 1 of the resume, shown in the Resume section near the top.
   // When you swap the PDF, ask Claude to regenerate this image too.
   resumePreview: "/resume-preview.jpg",
-  resumeUpdated: "Sept 2026",
+  resumeUpdated: "Oct 2026",
 };
 
 export const hero = {
