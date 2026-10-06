@@ -292,7 +292,9 @@ export default function Home() {
                     <i /><i /><i />
                     <span>{p.link ? p.link.replace(/^https?:\/\//, "").replace(/\/$/, "") : p.name.toLowerCase()}</span>
                   </div>
-                  {p.image ? (
+                  {p.video ? (
+                    <video src={p.video} poster={p.image || undefined} autoPlay muted loop playsInline preload="metadata" aria-label={`${p.name} demo recording`} />
+                  ) : p.image ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img src={p.image} alt={`${p.name} screenshot`} loading="lazy" />
                   ) : (

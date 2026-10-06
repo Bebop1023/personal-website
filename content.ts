@@ -109,7 +109,9 @@ export const projects = [
       "Automated GitHub Actions CI that builds the shell, runs 15 end-to-end tests, reruns them under AddressSanitizer with leak detection, and fuzzes the parser on every push.",
     ],
     stack: ["C++20", "POSIX", "libFuzzer", "AddressSanitizer", "GitHub Actions"],
-    image: "",
+    image: "/projects/mini-shell.jpg",
+    // video: a short silent screen recording that plays on the card ("" = just show the image)
+    video: "/projects/mini-shell.mp4",
     link: "https://github.com/Bebop1023/mini-shell",
     linkLabel: "View code",
   },
@@ -128,6 +130,7 @@ export const projects = [
     stack: ["Next.js", "TypeScript", "Python", "Claude API", "GPT-4o", "Whisper"],
     // image: a screenshot in /public/projects. Leave "" to show a styled placeholder.
     image: "/projects/pitchpad.jpg",
+    video: "",
     link: "https://pitchpadapp.vercel.app/", // live site, demo video, or repo
     linkLabel: "Live site",
   },
@@ -144,6 +147,7 @@ export const projects = [
     ],
     stack: ["Next.js", "TypeScript", "Python", "GPT-4o", "Whisper", "TTS"],
     image: "/projects/scholarsync.jpg",
+    video: "",
     link: "https://drive.google.com/file/d/1jsFEkGU76KKBRjbuFwS28nbNsvKoC7Lx/view", // demo video
     linkLabel: "Watch demo",
   },
@@ -161,6 +165,7 @@ export const projects = [
     ],
     stack: ["Python", "Flask", "FastAPI", "JavaScript", "OpenAI", "Supabase"],
     image: "",
+    video: "",
     link: "",
     linkLabel: "",
   },

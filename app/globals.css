@@ -587,3 +587,6 @@ main { overflow-x: clip; }
 
 /* Four project cards: two per row on computers */
 @media (min-width: 901px) { .projects { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* Demo video on a project card */
+.project-shot video { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: top left; background: #1c1c1c; }
