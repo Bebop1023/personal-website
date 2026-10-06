@@ -73,10 +73,11 @@ export const about = {
 };
 
 export const skills = [
-  { group: "Languages", items: ["Python", "TypeScript", "JavaScript", "C++", "Java"] },
-  { group: "Frameworks & Tools", items: ["Next.js", "React", "Flask", "FastAPI", "REST APIs", "JWT Auth", "Supabase (Postgres)", "SQLite", "Git/GitHub"] },
-  { group: "AI Tools", items: ["Claude Code", "Codex", "Claude API", "OpenAI API", "Whisper", "Text-to-Speech", "Vapi", "Make.com"] },
-  { group: "Security", items: ["CrowdStrike Falcon", "Zscaler ZIA / ZPA / ZDX", "Qualys", "Okta"] },
+  { group: "Languages", items: ["C++20 / C++17", "Python", "Java", "TypeScript", "JavaScript"] },
+  { group: "Systems Programming", items: ["Linux / POSIX", "fork, execvp, waitpid", "Signals", "Pipes", "File descriptors", "I/O redirection", "Memory debugging"] },
+  { group: "Security & Testing", items: ["libFuzzer", "AddressSanitizer", "End-to-end tests", "GitHub Actions CI", "CrowdStrike Falcon", "Zscaler ZIA / ZPA / ZDX", "Qualys"] },
+  { group: "Infrastructure", items: ["Windows endpoints (GPO, RMM, MDM)", "Okta / IdP migration", "Make.com", "Git/GitHub"] },
+  { group: "Application & AI", items: ["React", "Next.js", "FastAPI / Flask", "REST APIs", "Postgres", "Claude Code", "Codex", "OpenAI API", "Claude API", "Vapi"] },
 ];
 
 export const experience = [
@@ -95,6 +96,23 @@ export const experience = [
 ];
 
 export const projects = [
+  {
+    name: "Mini Shell",
+    award: "",
+    event: "Personal Project",
+    date: "Oct 2026",
+    summary:
+      "A Unix shell written from scratch in C++20 on raw POSIX system calls, with pipelines, output redirection, built-ins, and Ctrl+C handling.",
+    points: [
+      "Built on fork, execvp, waitpid, pipe, dup2, open, and signal, supporting pipelines, output redirection, built-ins (cd, exit), and Ctrl+C.",
+      "Fuzz-tested the command parser with libFuzzer and AddressSanitizer across 5.5M+ inputs with zero crashes, and proved the harness works by planting a parser bug it caught within seconds.",
+      "Automated GitHub Actions CI that builds the shell, runs 15 end-to-end tests, reruns them under AddressSanitizer with leak detection, and fuzzes the parser on every push.",
+    ],
+    stack: ["C++20", "POSIX", "libFuzzer", "AddressSanitizer", "GitHub Actions"],
+    image: "",
+    link: "https://github.com/Bebop1023/mini-shell",
+    linkLabel: "View code",
+  },
   {
     name: "PitchPad",
     award: "1st Place",

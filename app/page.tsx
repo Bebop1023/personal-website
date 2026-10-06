@@ -43,7 +43,7 @@ export default function Home() {
           <a href="#about">About</a>
           <a href="#experience">Experience</a>
           <a href="#startup">Startup</a>
-          <a href="#projects">Hackathons</a>
+          <a href="#projects">Projects</a>
           <a href="#taekwondo">Taekwondo</a>
           <a href="#leadership">Service</a>
           <a href="#contact">Contact</a>
@@ -283,7 +283,7 @@ export default function Home() {
 
         {/* ---------- PROJECTS ---------- */}
         <section id="projects" className="wrap section">
-          <SectionHead index="04" label="Hackathon Projects" title="Built at hackathons." />
+          <SectionHead index="04" label="Projects" title="Things I’ve built." />
           <div className="projects">
             {projects.map((p, i) => (
               <Reveal key={p.name} delay={(i % 2) * 100} className={`project ${p.award ? "has-award" : ""}`}>
