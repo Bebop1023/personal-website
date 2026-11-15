@@ -104,7 +104,7 @@ export const projects = [
     summary:
       "A security system for companies that use AI assistants. It catches attacks on people and on the AI, links separate warning signs into one incident, stops dangerous AI actions automatically, and leaves the big decisions to a human.",
     points: [
-      "My role on a 4-person team: the AI detectors and the red team that attacks the system, including the live demo where the audience tries to trick the AI from their phones.",
+      "My role on a 4-person team: built the AI detectors and the red team that attacks the system to prove the defenses hold.",
       "Code, not AI, scores every event from 0 to 100 and links related signals into one incident: three Medium warnings (45, 50, 55) become one Critical incident at 85.",
       "An Agent Firewall checks every AI action before it runs through 5 layers (injection scan, intent check, scope policy, taint tracking, leak protection), and a human approves anything disruptive from their phone.",
       "Benchmarked: 1 of 48 attacks reached the AI unflagged (48 of 48 without Kairos), with 0 false positives across 148 normal logins, messages, and emails and 0.13 ms added per scan.",
