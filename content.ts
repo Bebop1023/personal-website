@@ -98,7 +98,7 @@ export const experience = [
 export const projects = [
   {
     name: "Kairos",
-    award: "",
+    award: "1st Place",
     event: "HackNCAT 10.0 · Cisco Track · Team project",
     date: "Nov 2026",
     summary:
@@ -117,6 +117,9 @@ export const projects = [
     // link2: an optional second button on the card ("" = hidden)
     link2: "https://hack-ncat-10-0.vercel.app/attack",
     link2Label: "Try the live demo",
+    // link3: an optional third button ("" = hidden)
+    link3: "https://github.com/SWEthan098/HackNCAT-10.0",
+    link3Label: "View code",
   },
   {
     name: "Mini Shell",
@@ -138,6 +141,8 @@ export const projects = [
     linkLabel: "View code",
     link2: "",
     link2Label: "",
+    link3: "",
+    link3Label: "",
   },
   {
     name: "PitchPad",
@@ -159,6 +164,8 @@ export const projects = [
     linkLabel: "Live site",
     link2: "",
     link2Label: "",
+    link3: "",
+    link3Label: "",
   },
   {
     name: "ScholarSync",
@@ -178,6 +185,8 @@ export const projects = [
     linkLabel: "Watch demo",
     link2: "",
     link2Label: "",
+    link3: "",
+    link3Label: "",
   },
   {
     name: "Heart Care AI",
@@ -198,6 +207,8 @@ export const projects = [
     linkLabel: "",
     link2: "",
     link2Label: "",
+    link3: "",
+    link3Label: "",
   },
 ];
 

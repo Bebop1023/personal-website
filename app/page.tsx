@@ -325,7 +325,7 @@ export default function Home() {
                       <span key={s} className="chip">{s}</span>
                     ))}
                   </div>
-                  {(p.link || p.link2) && (
+                  {(p.link || p.link2 || p.link3) && (
                     <div className="project-links">
                       {p.link && (
                         <a className="link" href={p.link} target="_blank" rel="noreferrer">
@@ -335,6 +335,11 @@ export default function Home() {
                       {p.link2 && (
                         <a className="link" href={p.link2} target="_blank" rel="noreferrer">
                           {p.link2Label || "More"} <Arrow />
+                        </a>
+                      )}
+                      {p.link3 && (
+                        <a className="link" href={p.link3} target="_blank" rel="noreferrer">
+                          {p.link3Label || "More"} <Arrow />
                         </a>
                       )}
                     </div>
