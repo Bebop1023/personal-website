@@ -594,3 +594,14 @@ main { overflow-x: clip; }
 /* Projects with two buttons */
 .project-links { display: flex; flex-wrap: wrap; gap: 4px 18px; justify-content: flex-end; }
 @media (max-width: 520px) { .project-links { justify-content: flex-start; } }
+
+/* Clickable project preview that opens a demo video */
+.shot-play { position: relative; display: block; overflow: hidden; }
+.shot-play .play-btn {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center;
+  background: rgba(7, 11, 22, 0.78); color: var(--accent); border: 2px solid var(--accent);
+  box-shadow: 0 10px 30px -8px rgba(0, 0, 0, 0.7); transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+}
+.shot-play .play-btn svg { margin-left: 3px; }
+.shot-play:hover .play-btn { transform: translate(-50%, -50%) scale(1.08); background: var(--accent); color: #111; }

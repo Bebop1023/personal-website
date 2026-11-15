@@ -107,16 +107,19 @@ export const projects = [
       "My role on a 4-person team: built the AI detectors and the red team that attacks the system to prove the defenses hold.",
       "Code, not AI, scores every event from 0 to 100 and links related signals into one incident: three Medium warnings (45, 50, 55) become one Critical incident at 85.",
       "An Agent Firewall checks every AI action before it runs through 5 layers (injection scan, intent check, scope policy, taint tracking, leak protection), and a human approves anything disruptive from their phone.",
-      "Benchmarked: 1 of 48 attacks reached the AI unflagged (48 of 48 without Kairos), with 0 false positives across 148 normal logins, messages, and emails and 0.13 ms added per scan.",
+      "Benchmarked against 48 prompt-injection attacks with 0 breaches: only 1 got past the first scan (all 48 do without Kairos), and the firewall's other layers still stopped it. 0 false positives across 148 normal logins, messages, and emails, with 0.13 ms added per scan.",
     ],
     stack: ["Next.js", "TypeScript", "FastAPI", "Python", "Supabase", "Claude API", "Playwright"],
     image: "/projects/kairos.jpg",
+    // imageLink: clicking the picture opens this (shows a play button); barText: label in the fake browser bar
+    imageLink: "https://drive.google.com/file/d/1nrw_L16RRDPCNq53_RieYXPr12vjngUq/view",
+    barText: "kairos · demo video",
     video: "",
     link: "https://drive.google.com/file/d/1nrw_L16RRDPCNq53_RieYXPr12vjngUq/view", // demo video
     linkLabel: "Watch demo",
     // link2: an optional second button on the card ("" = hidden)
-    link2: "https://hack-ncat-10-0.vercel.app/attack",
-    link2Label: "Try the live demo",
+    link2: "https://www.canva.com/d/MtlVWLthiZml64-",
+    link2Label: "View presentation",
     // link3: an optional third button ("" = hidden)
     link3: "https://github.com/SWEthan098/HackNCAT-10.0",
     link3Label: "View code",
@@ -135,6 +138,8 @@ export const projects = [
     ],
     stack: ["C++20", "POSIX", "libFuzzer", "AddressSanitizer", "GitHub Actions"],
     image: "/projects/mini-shell.jpg",
+    imageLink: "",
+    barText: "",
     // video: a short silent screen recording that plays on the card ("" = just show the image)
     video: "/projects/mini-shell.mp4",
     link: "https://github.com/Bebop1023/mini-shell",
@@ -159,6 +164,8 @@ export const projects = [
     stack: ["Next.js", "TypeScript", "Python", "Claude API", "GPT-4o", "Whisper"],
     // image: a screenshot in /public/projects. Leave "" to show a styled placeholder.
     image: "/projects/pitchpad.jpg",
+    imageLink: "",
+    barText: "",
     video: "",
     link: "https://pitchpadapp.vercel.app/", // live site, demo video, or repo
     linkLabel: "Live site",
@@ -170,7 +177,7 @@ export const projects = [
   {
     name: "ScholarSync",
     award: "3rd Place",
-    event: "NC A&T Hackathon · Bank of America",
+    event: "Bank of America Codeathon",
     date: "Apr 2026",
     summary:
       "Financial wellness platform that puts a student's expenses, scholarships, GPA, and career plan in one dashboard, with a voice AI advisor.",
@@ -180,6 +187,8 @@ export const projects = [
     ],
     stack: ["Next.js", "TypeScript", "Python", "GPT-4o", "Whisper", "TTS"],
     image: "/projects/scholarsync.jpg",
+    imageLink: "",
+    barText: "",
     video: "",
     link: "https://drive.google.com/file/d/1jsFEkGU76KKBRjbuFwS28nbNsvKoC7Lx/view", // demo video
     linkLabel: "Watch demo",
@@ -202,6 +211,8 @@ export const projects = [
     ],
     stack: ["Python", "Flask", "FastAPI", "JavaScript", "OpenAI", "Supabase"],
     image: "",
+    imageLink: "",
+    barText: "",
     video: "",
     link: "",
     linkLabel: "",

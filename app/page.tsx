@@ -290,10 +290,18 @@ export default function Home() {
                 <div className="project-shot">
                   <div className="shot-bar" aria-hidden>
                     <i /><i /><i />
-                    <span>{(p.link2 || p.link) ? (p.link2 || p.link).replace(/^https?:\/\//, "").replace(/\/$/, "") : p.name.toLowerCase()}</span>
+                    <span>{p.barText || (p.link ? p.link.replace(/^https?:\/\//, "").replace(/\/$/, "") : p.name.toLowerCase())}</span>
                   </div>
                   {p.video ? (
                     <video src={p.video} poster={p.image || undefined} autoPlay muted loop playsInline preload="metadata" aria-label={`${p.name} demo recording`} />
+                  ) : p.image && p.imageLink ? (
+                    <a className="shot-play" href={p.imageLink} target="_blank" rel="noreferrer" aria-label={`Watch the ${p.name} demo video`}>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={p.image} alt={`${p.name} preview`} loading="lazy" />
+                      <span className="play-btn" aria-hidden>
+                        <svg width="22" height="22" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor" /></svg>
+                      </span>
+                    </a>
                   ) : p.image ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img src={p.image} alt={`${p.name} screenshot`} loading="lazy" />
