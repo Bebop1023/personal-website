@@ -290,7 +290,7 @@ export default function Home() {
                 <div className="project-shot">
                   <div className="shot-bar" aria-hidden>
                     <i /><i /><i />
-                    <span>{p.link ? p.link.replace(/^https?:\/\//, "").replace(/\/$/, "") : p.name.toLowerCase()}</span>
+                    <span>{(p.link2 || p.link) ? (p.link2 || p.link).replace(/^https?:\/\//, "").replace(/\/$/, "") : p.name.toLowerCase()}</span>
                   </div>
                   {p.video ? (
                     <video src={p.video} poster={p.image || undefined} autoPlay muted loop playsInline preload="metadata" aria-label={`${p.name} demo recording`} />
@@ -325,10 +325,19 @@ export default function Home() {
                       <span key={s} className="chip">{s}</span>
                     ))}
                   </div>
-                  {p.link && (
-                    <a className="link" href={p.link} target="_blank" rel="noreferrer">
-                      {p.linkLabel || "View"} <Arrow />
-                    </a>
+                  {(p.link || p.link2) && (
+                    <div className="project-links">
+                      {p.link && (
+                        <a className="link" href={p.link} target="_blank" rel="noreferrer">
+                          {p.linkLabel || "View"} <Arrow />
+                        </a>
+                      )}
+                      {p.link2 && (
+                        <a className="link" href={p.link2} target="_blank" rel="noreferrer">
+                          {p.link2Label || "More"} <Arrow />
+                        </a>
+                      )}
+                    </div>
                   )}
                 </div>
               </Reveal>

@@ -112,8 +112,11 @@ export const projects = [
     stack: ["Next.js", "TypeScript", "FastAPI", "Python", "Supabase", "Claude API", "Playwright"],
     image: "/projects/kairos.jpg",
     video: "",
-    link: "https://hack-ncat-10-0.vercel.app/attack", // live red-team demo
-    linkLabel: "Try the live demo",
+    link: "https://drive.google.com/file/d/1nrw_L16RRDPCNq53_RieYXPr12vjngUq/view", // demo video
+    linkLabel: "Watch demo",
+    // link2: an optional second button on the card ("" = hidden)
+    link2: "https://hack-ncat-10-0.vercel.app/attack",
+    link2Label: "Try the live demo",
   },
   {
     name: "Mini Shell",
@@ -133,6 +136,8 @@ export const projects = [
     video: "/projects/mini-shell.mp4",
     link: "https://github.com/Bebop1023/mini-shell",
     linkLabel: "View code",
+    link2: "",
+    link2Label: "",
   },
   {
     name: "PitchPad",
@@ -152,6 +157,8 @@ export const projects = [
     video: "",
     link: "https://pitchpadapp.vercel.app/", // live site, demo video, or repo
     linkLabel: "Live site",
+    link2: "",
+    link2Label: "",
   },
   {
     name: "ScholarSync",
@@ -169,6 +176,8 @@ export const projects = [
     video: "",
     link: "https://drive.google.com/file/d/1jsFEkGU76KKBRjbuFwS28nbNsvKoC7Lx/view", // demo video
     linkLabel: "Watch demo",
+    link2: "",
+    link2Label: "",
   },
   {
     name: "Heart Care AI",
@@ -187,6 +196,8 @@ export const projects = [
     video: "",
     link: "",
     linkLabel: "",
+    link2: "",
+    link2Label: "",
   },
 ];
 

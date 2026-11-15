@@ -590,3 +590,7 @@ main { overflow-x: clip; }
 
 /* Demo video on a project card */
 .project-shot video { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: top left; background: #1c1c1c; }
+
+/* Projects with two buttons */
+.project-links { display: flex; flex-wrap: wrap; gap: 4px 18px; justify-content: flex-end; }
+@media (max-width: 520px) { .project-links { justify-content: flex-start; } }
