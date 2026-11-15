@@ -102,9 +102,9 @@ export const projects = [
     event: "HackNCAT 10.0 · Cisco Track · Team project",
     date: "Nov 2026",
     summary:
-      "An AI security platform that covers all 3 of the challenge's mission areas in one system: cyber threats like suspicious logins, deception and impersonation aimed at people, and attacks on a company's own AI agents like prompt injection and data leaks. It links separate warning signs into one incident, stops dangerous AI actions automatically, and leaves the big decisions to a human.",
+      "An AI security platform that covers all 3 of the challenge's mission areas in one system: bots and password-guessing attacks on logins, phishing and impersonation aimed at people (including manipulative messages written by an AI), and prompt injection and data leaks targeting a company's own AI agents. It links separate warning signs into one incident, stops dangerous AI actions automatically, and leaves the big decisions to a human.",
     points: [
-      "My role on a 4-person team: built the AI detectors and the red team that attacks the system to prove the defenses hold.",
+      "My role on a 4-person team: built all 3 detectors (Login Guard, Comms Guard, and the prompt-injection scanner) plus the red team that attacks the system to prove the defenses hold. Login Guard never flags someone as a bot just for using a password manager or screen reader.",
       "Code, not AI, scores every event from 0 to 100 and links related signals into one incident: three Medium warnings (45, 50, 55) become one Critical incident at 85.",
       "An Agent Firewall checks every AI action before it runs through 5 layers (injection scan, intent check, scope policy, taint tracking, leak protection), and a human approves anything disruptive from their phone.",
       "Benchmarked against 48 prompt-injection attacks with 0 breaches: only 1 got past the first scan (all 48 do without Kairos), and the firewall's other layers still stopped it. 0 false positives across 148 normal logins, messages, and emails, with 0.13 ms added per scan.",
