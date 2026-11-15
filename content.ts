@@ -102,7 +102,7 @@ export const projects = [
     event: "HackNCAT 10.0 · Cisco Track · Team project",
     date: "Nov 2026",
     summary:
-      "A security system for companies that use AI assistants. It catches attacks on people and on the AI, links separate warning signs into one incident, stops dangerous AI actions automatically, and leaves the big decisions to a human.",
+      "An AI security platform that covers all 3 of the challenge's mission areas in one system: cyber threats like suspicious logins, deception and impersonation aimed at people, and attacks on a company's own AI agents like prompt injection and data leaks. It links separate warning signs into one incident, stops dangerous AI actions automatically, and leaves the big decisions to a human.",
     points: [
       "My role on a 4-person team: built the AI detectors and the red team that attacks the system to prove the defenses hold.",
       "Code, not AI, scores every event from 0 to 100 and links related signals into one incident: three Medium warnings (45, 50, 55) become one Critical incident at 85.",
