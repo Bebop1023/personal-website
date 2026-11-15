@@ -106,7 +106,7 @@ export const projects = [
     points: [
       "My role on a 4-person team: built all 3 detectors (Login Guard, Comms Guard, and the prompt-injection scanner) plus the red team that attacks the system to prove the defenses hold. Login Guard never flags someone as a bot just for using a password manager or screen reader.",
       "Code, not AI, scores every event from 0 to 100 and links related signals into one incident: three Medium warnings (45, 50, 55) become one Critical incident at 85. Responses scale with the risk (watch, slow, challenge, block), and a held message can be released if it was a false alarm.",
-      "At the demo, judges attacked it live from their phones: password guessing, fake boss wire requests, and tricking the finance AI. Each incident maps to MITRE ATT&CK and ATLAS, an AI analyst explains what happened but can't take action, and every decision goes into a tamper-evident audit log.",
+      "During our live presentation, the whole audience attacked it from their phones: password guessing, fake boss wire requests, and tricking the finance AI. Each incident maps to MITRE ATT&CK and ATLAS, an AI analyst explains what happened but can't take action, and every decision goes into a tamper-evident audit log.",
       "An Agent Firewall checks every AI action before it runs through 5 layers (injection scan, intent check, scope policy, taint tracking, leak protection), and a human approves anything disruptive from their phone.",
       "Benchmarked against 48 prompt-injection attacks with 0 breaches: only 1 got past the first scan (all 48 do without Kairos), and the firewall's other layers still stopped it. 0 false positives across 148 normal logins, messages, and emails, with 0.13 ms added per scan.",
     ],
